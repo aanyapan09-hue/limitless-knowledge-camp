@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll | Limitless Knowledge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple: #9d73ff;
+            --lilac: #E6E6FA; 
+            --yellow: #ffd966;
+            --black: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body { background-color: var(--lilac); color: var(--black); }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: white;
+            border-bottom: 3px solid var(--black);
+        }
+
+        .logo { font-weight: 900; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; text-decoration: none; color: black; }
+
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.9rem; }
+
+        .btn-sm { padding: 8px 20px; border-radius: 50px; border: 2px solid var(--black); font-weight: 800; text-decoration: none; }
+        .bg-dark { background: var(--black); color: white !important; }
+        .bg-purple { background: var(--purple); color: white !important; box-shadow: 3px 3px 0px var(--black); }
+
+        /* --- Layout --- */
+        .enroll-container {
+            display: flex;
+            padding: 80px 10%;
+            gap: 80px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .enroll-info { flex: 1; min-width: 320px; }
+        .form-container { flex: 1; min-width: 350px; }
+
+        .badge {
+            background: var(--yellow);
+            padding: 6px 15px;
+            border-radius: 50px;
+            border: 2px solid var(--black);
+            font-size: 0.8rem;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 4rem; font-weight: 900; line-height: 1; margin-bottom: 20px; }
+        .subtext { font-size: 1.1rem; line-height: 1.5; margin-bottom: 30px; color: #444; }
+
+        /* --- Checklist --- */
+        .checklist { list-style: none; }
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--purple);
+            font-size: 0.8rem;
+        }
+
+        /* --- Form Styling --- */
+        .registration-form {
+            background: white;
+            border: 4px solid var(--black);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 12px 12px 0px var(--black);
+        }
+
+        .registration-form h2 { font-size: 2rem; font-weight: 900; margin-bottom: 25px; }
+
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 800; font-size: 0.9rem; margin-bottom: 8px; }
+        label span { color: var(--purple); }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .row { display: flex; gap: 15px; }
+        .row .form-group { flex: 1; }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--purple);
+            color: white;
+            border: 3px solid var(--black);
+            border-radius: 15px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 5px 5px 0px var(--black);
+            margin-top: 10px;
+        }
+
+        .footer-note { text-align: center; font-size: 0.8rem; margin-top: 15px; color: #666; font-weight: 500; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .enroll-container { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <div style="background: var(--purple); width: 32px; height: 32px; border-radius: 8px; border: 2px solid black; display: flex; align-items: center; justify-content: center; color: white;">✦</div>
+            Limitless Knowledge
+        </a>
+        <ul class="nav-links">
+            <li><a href="mockSite.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Counselors</a></li>
+            <li><a href="#" class="btn-sm bg-dark">Sign Up</a></li>
+            <li><a href="#" class="btn-sm bg-purple">Enroll</a></li>
+        </ul>
+    </nav>
+
+    <div class="enroll-container">
+        <div class="enroll-info">
+            <span class="badge">Enroll for Summer 2026</span>
+            <h1>Save your camper's spot.</h1>
+            <p class="subtext">Spots are limited. Fill out the form and we'll follow up with payment, dates, and a welcome packet.</p>
+            
+            <ul class="checklist">
+                <li><div class="check-icon">✓</div> 9 days of camp</li>
+                <li><div class="check-icon">✓</div> Grades 3–5 welcome</li>
+                <li><div class="check-icon">✓</div> All materials included (except shirt for tie-dye day)</li>
+                <li><div class="check-icon">✓</div> Pizza party + custom camp shirt</li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <form class="registration-form">
+                <h2>Registration form</h2>
+                
+                <div class="form-group">
+                    <label>Parent / Guardian Name <span>*</span></label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email <span>*</span></label>
+                    <input type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel">
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Camper Name <span>*</span></label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Grade (Fall 2026) <span>*</span></label>
+                        <select required>
+                            <option value="">Select</option>
+                            <option value="3">3th Grade</option>
+                            <option value="4">4th Grade</option>
+                            <option value="5">5th Grade</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Allergies or notes</label>
+                    <textarea rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>How did you hear about us?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="social">Social Media</option>
+                        <li><a href="#">Friend/Family</a></li>
+                        <li><a href="#">School</a></li>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Registration</button>
+                <p class="footer-note">Submitting just sends us your interest — no payment required yet.</p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
